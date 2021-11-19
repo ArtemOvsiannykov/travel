@@ -1,0 +1,45 @@
+html,
+body {
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+$coral: #d03958;
+
+.coral {
+    color: $coral;
+}
+
+@mixin container($max-width) {
+    max-width: $max-width;
+    padding: 0 15px;
+    box-sizing: content-box;
+    margin: 0 auto;
+}
+.container {
+    @include container(1000px);
+    &-lg {
+        @include container(1073px);
+    }
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.txt--uppercase {
+    text-transform: uppercase;
+}
+.h3-title {
+    font-family: Roboto;
+    font-size: 50px;
+    line-height: 59px;
+    color: $coral;
+}
+.h2-title {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 61px;
+    color: #1f1f1f;
+}
